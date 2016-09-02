@@ -9,26 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var task_1 = require('./task');
-var TodoListComponent = (function () {
-    function TodoListComponent() {
-        this.tasks = [
-            new task_1.Task('Do Todo App', false),
-            new task_1.Task('Sleep early', false)
-        ];
+var TodoTaskComponent = (function () {
+    function TodoTaskComponent() {
     }
-    TodoListComponent.prototype.onClick = function () {
-        console.log('hello');
+    // constructor() {
+    //   this.task = new Task('Do Todo App', false);
+    // }
+    TodoTaskComponent.prototype.taskChecked = function () {
+        this.task.taskChecked();
+        return false;
     };
-    TodoListComponent = __decorate([
+    TodoTaskComponent = __decorate([
         core_1.Component({
-            selector: 'todo-list',
-            templateUrl: 'app/html/todo-list.html',
-            styleUrls: ['app/css/todo-list.css']
+            selector: 'todo-task',
+            templateUrl: 'app/html/todo-task.html',
+            styleUrls: ['app/css/todo-task.css'],
+            inputs: ['task'],
         }), 
         __metadata('design:paramtypes', [])
-    ], TodoListComponent);
-    return TodoListComponent;
+    ], TodoTaskComponent);
+    return TodoTaskComponent;
 }());
-exports.TodoListComponent = TodoListComponent;
-//# sourceMappingURL=todo-list.component.js.map
+exports.TodoTaskComponent = TodoTaskComponent;
+//# sourceMappingURL=todo-task.component.js.map

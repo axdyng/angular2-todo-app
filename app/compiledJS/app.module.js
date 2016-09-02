@@ -13,6 +13,8 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
 var todo_navbar_component_1 = require('./navbar/todo-navbar.component');
+var todo_list_component_1 = require('./todo-list/todo-list.component');
+var todo_task_component_1 = require('./todo-list/todo-task.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,7 +26,9 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                todo_navbar_component_1.TodoNavbarComponent
+                todo_navbar_component_1.TodoNavbarComponent,
+                todo_list_component_1.TodoListComponent,
+                todo_task_component_1.TodoTaskComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

@@ -4,6 +4,8 @@ import { FormsModule }    from '@angular/forms';
 
 import { AppComponent }         from './app.component';
 import { TodoNavbarComponent }  from './navbar/todo-navbar.component';
+import { TodoListComponent }    from './todo-list/todo-list.component';
+import { TodoTaskComponent }    from './todo-list/todo-task.component';
 
 @NgModule({
   imports: [
@@ -12,7 +14,9 @@ import { TodoNavbarComponent }  from './navbar/todo-navbar.component';
   ],
   declarations: [
     AppComponent,
-    TodoNavbarComponent
+    TodoNavbarComponent,
+    TodoListComponent,
+    TodoTaskComponent
   ],
   bootstrap: [ AppComponent ]
 })
