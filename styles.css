@@ -1,0 +1,12 @@
+@import 'https://fonts.googleapis.com/css?family=Baloo+Chettan';
+
+body {
+  background-image: url('http://orig14.deviantart.net/60e0/f/2012/331/c/6/chocobo_by_dashinghero-d5mdw9r.png');
+  font-family: 'Baloo Chettan', cursive;
+}
+
+#loading {
+  margin-top: 50%;
+  text-align: center;
+  color: purple;
+}

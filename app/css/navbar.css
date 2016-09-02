@@ -1,0 +1,14 @@
+#navbar {
+    background: none;
+    border: none;
+}
+
+.navbar-brand {
+    color: black !important;
+    text-align: center;
+    margin: 0 auto;
+}
+
+a:hover {
+    color: red !important;
+}
