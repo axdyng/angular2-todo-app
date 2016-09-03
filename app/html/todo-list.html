@@ -6,8 +6,14 @@
     </div>
   </div>
   <!-- New Todos -->
-  <div class="jumbotron">
-    <todo-task *ngFor="let todoTask of tasks" [task]="todoTask"></todo-task>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">To do tasks</h3>
+    </div>
+    <!-- Panel body -->
+    <div class="panel-body">
+      <todo-task *ngFor="let todoTask of tasks" [task]="todoTask"></todo-task>
+    </div>
   </div>
 
 </form>
