@@ -1,8 +1,8 @@
 <form>
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-      <input type="text" class="form-control" placeholder="What needs to be done?">
-      <button type="button" class="btn btn-default add-task" (click)="onClick()">Add Task</button>
+      <input type="text" class="form-control" placeholder="What needs to be done?" autofocus #newTask>
+      <button type="button" class="btn btn-default add-task" (click)="addTask(newTask)">Add Task</button>
     </div>
   </div>
   <!-- New Todos -->

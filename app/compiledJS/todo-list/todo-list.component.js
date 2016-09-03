@@ -17,8 +17,9 @@ var TodoListComponent = (function () {
             new task_1.Task('Sleep early', false)
         ];
     }
-    TodoListComponent.prototype.onClick = function () {
-        console.log('hello');
+    TodoListComponent.prototype.addTask = function (title) {
+        // console.log(`${title.value}`);
+        this.tasks.push(new task_1.Task(title.value, false));
     };
     TodoListComponent = __decorate([
         core_1.Component({

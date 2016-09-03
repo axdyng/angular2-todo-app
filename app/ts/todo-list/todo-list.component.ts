@@ -17,7 +17,8 @@ export class TodoListComponent {
     ];
   }
 
-  onClick() {
-    console.log('hello');
+  addTask(title: HTMLInputElement):void {
+    // console.log(`${title.value}`);
+    this.tasks.push( new Task(title.value, false) )
   }
 }
