@@ -11,12 +11,16 @@ export class TodoTaskComponent {
   // set property task to take schema from Task model
   task: Task;
 
-  // constructor() {
-  //   this.task = new Task('Do Todo App', false);
-  // }
-
   taskChecked(): boolean {
-    this.task.taskChecked();
+    if(this.task.checked) {
+      console.log('asdad')
+      this.task.checked = false;
+    }
+    else {
+      this.task.taskChecked();
+    }
+
     return false;
   }
+
 }

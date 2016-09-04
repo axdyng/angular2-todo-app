@@ -1,19 +1,32 @@
 <form>
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-      <input type="text" class="form-control" placeholder="What needs to be done?" autofocus #newTask>
-      <button type="button" class="btn btn-default add-task" (click)="addTask(newTask)">Add Task</button>
+      <input type="text" class="form-control" placeholder="What needs to be done?" autofocus #newTask (keyup.enter)="addTask(newTask)">
+      <!-- <button type="button" class="btn btn-default add-task" (click)="addTask(newTask)">Add Task</button> -->
     </div>
   </div>
+</form>
+
+<div class="jumbotron">
   <!-- New Todos -->
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h3 class="panel-title">To do tasks</h3>
+      <h3 class="panel-title">Tasks to do</h3>
     </div>
     <!-- Panel body -->
     <div class="panel-body">
-      <todo-task *ngFor="let todoTask of tasks" [task]="todoTask"></todo-task>
+      <todo-task *ngFor="let todoTask of incompleteTasks()" [task]="todoTask"></todo-task>
     </div>
   </div>
 
-</form>
+  <!-- Done tasks -->
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Tasks done</h3>
+    </div>
+    <!-- Panel body -->
+    <div class="panel-body">
+      <todo-task *ngFor="let task of doneTasks()" [task]="task"></todo-task>
+    </div>
+  </div>
+</div>

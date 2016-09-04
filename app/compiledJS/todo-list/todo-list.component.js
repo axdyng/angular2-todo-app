@@ -14,12 +14,25 @@ var TodoListComponent = (function () {
     function TodoListComponent() {
         this.tasks = [
             new task_1.Task('Do Todo App', false),
-            new task_1.Task('Sleep early', false)
+            new task_1.Task('Sleep early', false),
+            new task_1.Task('Eat durian', false),
+            new task_1.Task('Sip teh or some wine maybe?', false),
         ];
     }
     TodoListComponent.prototype.addTask = function (title) {
         // console.log(`${title.value}`);
         this.tasks.push(new task_1.Task(title.value, false));
+        title.value = '';
+    };
+    TodoListComponent.prototype.incompleteTasks = function () {
+        return this.tasks.filter(function (task) {
+            return task.checked === false;
+        });
+    };
+    TodoListComponent.prototype.doneTasks = function () {
+        return this.tasks.filter(function (task) {
+            return task.checked === true;
+        });
     };
     TodoListComponent = __decorate([
         core_1.Component({

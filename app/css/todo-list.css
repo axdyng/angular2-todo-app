@@ -1,4 +1,4 @@
-.add-task {
+/*.add-task {
   color: white;
   background-color: #6F8CC8;
   margin-top: 8px;
@@ -7,10 +7,14 @@
 .add-task:hover {
   color: #333;
   background-color: #e6e6e6;
+}*/
+
+.jumbotron {
+  margin-top: 8px;
 }
 
 .panel {
-  margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 .panel-heading {

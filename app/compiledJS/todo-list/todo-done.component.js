@@ -9,29 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var TodoTaskComponent = (function () {
-    function TodoTaskComponent() {
+var TodoDoneComponent = (function () {
+    function TodoDoneComponent() {
     }
-    TodoTaskComponent.prototype.taskChecked = function () {
-        if (this.task.checked) {
-            console.log('asdad');
-            this.task.checked = false;
-        }
-        else {
-            this.task.taskChecked();
-        }
+    TodoDoneComponent.prototype.taskChecked = function () {
+        this.task.taskChecked();
         return false;
     };
-    TodoTaskComponent = __decorate([
+    TodoDoneComponent = __decorate([
         core_1.Component({
-            selector: 'todo-task',
-            templateUrl: 'app/html/todo-task.html',
-            styleUrls: ['app/css/todo-task.css'],
+            selector: 'todo-done',
+            templateUrl: 'app/html/todo-done.html',
+            styleUrls: ['app/css/todo-done.css'],
             inputs: ['task'],
         }), 
         __metadata('design:paramtypes', [])
-    ], TodoTaskComponent);
-    return TodoTaskComponent;
+    ], TodoDoneComponent);
+    return TodoDoneComponent;
 }());
-exports.TodoTaskComponent = TodoTaskComponent;
-//# sourceMappingURL=todo-task.component.js.map
+exports.TodoDoneComponent = TodoDoneComponent;
+//# sourceMappingURL=todo-done.component.js.map

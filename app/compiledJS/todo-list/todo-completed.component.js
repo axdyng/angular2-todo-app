@@ -13,18 +13,12 @@ var TodoTaskComponent = (function () {
     function TodoTaskComponent() {
     }
     TodoTaskComponent.prototype.taskChecked = function () {
-        if (this.task.checked) {
-            console.log('asdad');
-            this.task.checked = false;
-        }
-        else {
-            this.task.taskChecked();
-        }
+        this.task.taskChecked();
         return false;
     };
     TodoTaskComponent = __decorate([
         core_1.Component({
-            selector: 'todo-task',
+            selector: 'todo-done',
             templateUrl: 'app/html/todo-task.html',
             styleUrls: ['app/css/todo-task.css'],
             inputs: ['task'],
@@ -34,4 +28,4 @@ var TodoTaskComponent = (function () {
     return TodoTaskComponent;
 }());
 exports.TodoTaskComponent = TodoTaskComponent;
-//# sourceMappingURL=todo-task.component.js.map
+//# sourceMappingURL=todo-completed.component.js.map

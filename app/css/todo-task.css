@@ -1,4 +1,13 @@
 .list-group-item {
+  background-color: #C4E3F3;
+  color: #6F8CC8;
+  border-color: #C4E3F3;
+  border-radius: 5px;
   text-align: center;
   font-size: 1.2em;
+}
+
+.list-group-item:hover {
+  background-color: #ACE0AC;
+  color: #009534;
 }
