@@ -1,13 +1,42 @@
 .list-group-item {
   background-color: #C4E3F3;
+  border-color: #C4E3F3;
+  margin-bottom: 1px;
+}
+
+.task-btn {
+  background-color: #C4E3F3;
   color: #6F8CC8;
   border-color: #C4E3F3;
   border-radius: 5px;
   text-align: center;
   font-size: 1.2em;
+  width: 100%;
 }
 
-.list-group-item:hover {
+.task-btn:hover {
   background-color: #ACE0AC;
   color: #009534;
+}
+
+.task-delete-btn {
+  background-color: #C4E3F3;
+  color: red;
+}
+
+.task-delete-btn:hover {
+  background-color: #c9302c;
+  color: #fff;
+}
+
+.isDone {
+  background-color: #ACE0AC;
+  color: #009534;
+  text-decoration: line-through;
+}
+
+.isDone:hover {
+  background-color: #C4E3F3;
+  color: #6F8CC8;
+  text-decoration: line-through;
 }

@@ -24,6 +24,9 @@ var TodoListComponent = (function () {
         this.tasks.push(new task_1.Task(title.value, false));
         title.value = '';
     };
+    TodoListComponent.prototype.deleteTask = function (task) {
+        this.tasks.splice(task, 1);
+    };
     TodoListComponent.prototype.incompleteTasks = function () {
         return this.tasks.filter(function (task) {
             return task.checked === false;

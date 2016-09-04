@@ -26,6 +26,10 @@ export class TodoListComponent {
     title.value = '';
   }
 
+  deleteTask(task: any):void {
+    this.tasks.splice(task, 1);
+  }
+
   incompleteTasks(): Task[] {
     return this.tasks.filter( function (task) {
       return task.checked === false;

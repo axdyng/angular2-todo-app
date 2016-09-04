@@ -13,14 +13,18 @@ export class TodoTaskComponent {
 
   taskChecked(): boolean {
     if(this.task.checked) {
-      console.log('asdad')
       this.task.checked = false;
     }
     else {
       this.task.taskChecked();
     }
-
     return false;
+  }
+
+  doneCSS() {
+    if(this.task.checked) {
+      return true;
+    }
   }
 
 }

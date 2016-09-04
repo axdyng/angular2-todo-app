@@ -14,13 +14,17 @@ var TodoTaskComponent = (function () {
     }
     TodoTaskComponent.prototype.taskChecked = function () {
         if (this.task.checked) {
-            console.log('asdad');
             this.task.checked = false;
         }
         else {
             this.task.taskChecked();
         }
         return false;
+    };
+    TodoTaskComponent.prototype.doneCSS = function () {
+        if (this.task.checked) {
+            return true;
+        }
     };
     TodoTaskComponent = __decorate([
         core_1.Component({

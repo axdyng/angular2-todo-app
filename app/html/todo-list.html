@@ -15,18 +15,18 @@
     </div>
     <!-- Panel body -->
     <div class="panel-body">
-      <todo-task *ngFor="let todoTask of incompleteTasks()" [task]="todoTask"></todo-task>
+      <todo-task *ngFor="let todoTask of incompleteTasks(); let i = index" [task]="todoTask" (click)="deleteTask(i)"></todo-task>
     </div>
   </div>
 
   <!-- Done tasks -->
   <div class="panel panel-primary">
-    <div class="panel-heading">
+    <div class="panel-heading" [ngStyle]="{'background-color': '#009534'}">
       <h3 class="panel-title">Tasks done</h3>
     </div>
     <!-- Panel body -->
     <div class="panel-body">
-      <todo-task *ngFor="let task of doneTasks()" [task]="task"></todo-task>
+      <todo-task *ngFor="let task of doneTasks(); let d = index" [task]="task" (click)="deleteTask(d)"></todo-task>
     </div>
   </div>
 </div>

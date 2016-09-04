@@ -1,3 +1,17 @@
-<button type="button" class="list-group-item" (click)="taskChecked()">
+<!-- <button type="button" class="list-group-item" (click)="taskChecked()" [ngClass]="{isDone: doneCSS()}">
   <span> {{ task.title }}</span>
-</button>
+</button> -->
+
+<div class="row list-group-item">
+  <div class="col-xs-10">
+    <button type="button" class="task-btn" (click)="taskChecked()" [ngClass]="{isDone: doneCSS()}">
+      <span> {{ task.title }}</span>
+    </button>
+  </div>
+
+  <div class="col-xs-2">
+    <button type="button" class="btn task-delete-btn">
+      <i class="fa fa-trash-o fa-lg"></i>
+    </button>
+  </div>
+</div>
