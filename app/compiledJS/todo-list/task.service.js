@@ -22,6 +22,12 @@ var TaskService = (function () {
         this.id++;
         mock_tasks_1.TASKLIST.push(new task_1.Task(this.id, newTask, false));
     };
+    TaskService.prototype.updateTask = function (taskId) {
+        // find the item inside TASKLIST that match the id -> assign to let task
+        var task = mock_tasks_1.TASKLIST.find(function (item) { return item.id === taskId; });
+        // set the matched task status to alternate
+        task.status = !task.status;
+    };
     TaskService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

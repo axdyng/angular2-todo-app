@@ -30,7 +30,8 @@ var StatusPipe = (function () {
     };
     StatusPipe = __decorate([
         core_1.Pipe({
-            name: 'filterStatus'
+            name: 'filterStatus',
+            pure: false
         }), 
         __metadata('design:paramtypes', [])
     ], StatusPipe);
