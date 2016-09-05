@@ -4,7 +4,7 @@
 
 <div class="row list-group-item">
   <div class="col-xs-10">
-    <button type="button" class="task-btn" (click)="taskChecked()" [ngClass]="{isDone: doneCSS()}">
+    <button type="button" class="task-btn" (click)="checkDone()">
       <span> {{ task.title }}</span>
     </button>
   </div>

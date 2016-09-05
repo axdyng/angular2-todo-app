@@ -15,9 +15,7 @@
     </div>
     <!-- Panel body -->
     <div class="panel-body">
-      <div *ngFor="let task of tasks" >
-        {{ task.title }}
-      </div>
+      <todo-tasks *ngFor="let todoTask of (tasks | filterStatus: false)" [task]="todoTask"></todo-tasks>
       <!-- <todo-task *ngFor="let todoTask of incompleteTasks(); let i = index" [task]="todoTask" (click)="toggleExist()"></todo-task> -->
     </div>
   </div>
@@ -29,6 +27,7 @@
     </div>
     <!-- Panel body -->
     <div class="panel-body">
+      <todo-tasks *ngFor="let doneTask of (tasks | filterStatus: true)" [task]="doneTask"></todo-tasks>
       <!-- <todo-task *ngFor="let task of doneTasks(); let d = index" [task]="task" (click)="deleteDoneTask(d)"></todo-task> -->
     </div>
   </div>

@@ -5,7 +5,9 @@ import { FormsModule }    from '@angular/forms';
 import { AppComponent }         from './app.component';
 import { TodoNavbarComponent }  from './navbar/todo-navbar.component';
 import { TodoListComponent }    from './todo-list/todo-list.component';
-import { TodoTaskComponent }    from './todo-list/todo-task.component';
+import { TodoTasksComponent }   from './todo-list/todo-tasks.component';
+
+import { StatusPipe }   from './todo-list/status.pipe';
 
 @NgModule({
   imports: [
@@ -16,7 +18,8 @@ import { TodoTaskComponent }    from './todo-list/todo-task.component';
     AppComponent,
     TodoNavbarComponent,
     TodoListComponent,
-    TodoTaskComponent
+    TodoTasksComponent,
+    StatusPipe,
   ],
   bootstrap: [ AppComponent ]
 })

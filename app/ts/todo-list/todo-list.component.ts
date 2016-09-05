@@ -1,7 +1,6 @@
 import { Component, OnInit }  from '@angular/core';
 import { Task }               from './task';
 import { TaskService }        from './task.service';
-import { TodoTaskComponent }  from './todo-task.component';
 
 @Component({
     selector:     'todo-list',

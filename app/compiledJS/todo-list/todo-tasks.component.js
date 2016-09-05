@@ -9,19 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var task_service_1 = require('./task.service');
+// import { TaskService }  from './task.service';
 var TodoTasksComponent = (function () {
-    function TodoTasksComponent(taskService) {
-        this.taskService = taskService;
+    function TodoTasksComponent() {
     }
-    TodoTasksComponent.prototype.ngOnInit = function () {
-        // initialize getTasks() method
-        this.getTasks();
-    };
-    TodoTasksComponent.prototype.getTasks = function () {
-        this.tasks = this.taskService.getTasks();
-    };
+    // constructor(private taskService: TaskService) { }
     TodoTasksComponent.prototype.checkDone = function () {
+        console.log(this.task.status);
         return true;
     };
     TodoTasksComponent = __decorate([
@@ -31,9 +25,9 @@ var TodoTasksComponent = (function () {
             styleUrls: ['app/css/todo-tasks.css'],
             inputs: ['task'],
         }), 
-        __metadata('design:paramtypes', [task_service_1.TaskService])
+        __metadata('design:paramtypes', [])
     ], TodoTasksComponent);
     return TodoTasksComponent;
 }());
 exports.TodoTasksComponent = TodoTasksComponent;
-//# sourceMappingURL=todo-task.component.js.map
+//# sourceMappingURL=todo-tasks.component.js.map

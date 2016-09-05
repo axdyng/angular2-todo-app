@@ -14,7 +14,8 @@ var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
 var todo_navbar_component_1 = require('./navbar/todo-navbar.component');
 var todo_list_component_1 = require('./todo-list/todo-list.component');
-var todo_task_component_1 = require('./todo-list/todo-task.component');
+var todo_tasks_component_1 = require('./todo-list/todo-tasks.component');
+var status_pipe_1 = require('./todo-list/status.pipe');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,7 +29,8 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 todo_navbar_component_1.TodoNavbarComponent,
                 todo_list_component_1.TodoListComponent,
-                todo_task_component_1.TodoTaskComponent
+                todo_tasks_component_1.TodoTasksComponent,
+                status_pipe_1.StatusPipe,
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
