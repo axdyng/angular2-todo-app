@@ -29,6 +29,10 @@
   color: #fff;
 }
 
+.doneList {
+  background-color: #ACE0AC;
+}
+
 .isDone {
   background-color: #ACE0AC;
   color: #009534;

@@ -17,7 +17,14 @@ var TodoTasksComponent = (function () {
     TodoTasksComponent.prototype.checkTask = function (taskId) {
         // console.log(taskId)
         this.taskService.updateTask(taskId);
-        console.log(this.task.status);
+    };
+    TodoTasksComponent.prototype.deleteTask = function (taskId) {
+        this.taskService.deleteTask(taskId);
+    };
+    TodoTasksComponent.prototype.doneCSS = function () {
+        if (this.task.status) {
+            return true;
+        }
     };
     TodoTasksComponent = __decorate([
         core_1.Component({

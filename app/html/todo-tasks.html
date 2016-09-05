@@ -2,15 +2,15 @@
   <span> {{ task.title }}</span>
 </button> -->
 
-<div class="row list-group-item">
+<div class="row list-group-item" [ngClass]="{doneList: doneCSS()}">
   <div class="col-xs-10">
-    <button type="button" class="task-btn" (click)="checkTask(task.id)">
+    <button type="button" class="task-btn" (click)="checkTask(task.id)" [ngClass]="{isDone: doneCSS()}">
       <span> {{ task.title }}</span>
     </button>
   </div>
 
   <div class="col-xs-2">
-    <button type="button" class="btn task-delete-btn">
+    <button type="button" class="btn task-delete-btn" (click)="deleteTask(task.id)" [ngClass]="{doneList: doneCSS()}">
       <i class="fa fa-trash-o fa-lg"></i>
     </button>
   </div>

@@ -17,6 +17,15 @@ export class TodoTasksComponent {
   checkTask(taskId: number): void {
     // console.log(taskId)
     this.taskService.updateTask(taskId);
-    console.log(this.task.status)
+  }
+
+  deleteTask(taskId: number):void {
+    this.taskService.deleteTask(taskId);
+  }
+
+  doneCSS() {
+    if(this.task.status) {
+      return true
+    }
   }
 }

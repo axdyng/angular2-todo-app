@@ -28,6 +28,10 @@ var TaskService = (function () {
         // set the matched task status to alternate
         task.status = !task.status;
     };
+    TaskService.prototype.deleteTask = function (taskId) {
+        var task = mock_tasks_1.TASKLIST.find(function (item) { return item.id === taskId; });
+        mock_tasks_1.TASKLIST.splice(mock_tasks_1.TASKLIST.indexOf(task), 1);
+    };
     TaskService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
