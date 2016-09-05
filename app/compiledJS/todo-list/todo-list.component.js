@@ -9,41 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var task_1 = require('./task');
+var task_service_1 = require('./task.service');
 var TodoListComponent = (function () {
-    function TodoListComponent() {
-        this.tasks = [
-            new task_1.Task('Do Todo App', false),
-            new task_1.Task('Sleep early', false),
-            new task_1.Task('Eat durian', false),
-            new task_1.Task('Sip teh or some wine maybe?', false),
-        ];
+    function TodoListComponent(taskService) {
+        this.taskService = taskService;
     }
+    TodoListComponent.prototype.ngOnInit = function () {
+        // initialize getTasks() method
+        this.getTasks();
+    };
+    TodoListComponent.prototype.getTasks = function () {
+        this.tasks = this.taskService.getTasks();
+    };
     TodoListComponent.prototype.addTask = function (title) {
-        // console.log(`${title.value}`);
-        this.tasks.push(new task_1.Task(title.value, false));
+        this.taskService.addTask(title.value);
         title.value = '';
-    };
-    TodoListComponent.prototype.deleteTask = function (task) {
-        this.tasks.splice(task, 1);
-    };
-    TodoListComponent.prototype.incompleteTasks = function () {
-        return this.tasks.filter(function (task) {
-            return task.checked === false;
-        });
-    };
-    TodoListComponent.prototype.doneTasks = function () {
-        return this.tasks.filter(function (task) {
-            return task.checked === true;
-        });
     };
     TodoListComponent = __decorate([
         core_1.Component({
             selector: 'todo-list',
             templateUrl: 'app/html/todo-list.html',
-            styleUrls: ['app/css/todo-list.css']
+            styleUrls: ['app/css/todo-list.css'],
+            providers: [task_service_1.TaskService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [task_service_1.TaskService])
     ], TodoListComponent);
     return TodoListComponent;
 }());

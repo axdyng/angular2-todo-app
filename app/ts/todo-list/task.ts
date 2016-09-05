@@ -1,13 +1,15 @@
 export class Task {
+  id: number;
   title: string;
-  checked: boolean;
+  status: boolean;
 
-  constructor(title: string, checked?: boolean) {
+  constructor(id: number, title: string, status?: boolean) {
+    this.id = id;
     this.title = title;
-    this.checked = checked || false;
+    this.status = status || false;
   }
 
-  taskChecked():void {
-    this.checked = true;
+  taskDone():void {
+    this.status = true;
   }
 }

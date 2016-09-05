@@ -1,11 +1,12 @@
 "use strict";
 var Task = (function () {
-    function Task(title, checked) {
+    function Task(id, title, status) {
+        this.id = id;
         this.title = title;
-        this.checked = checked || false;
+        this.status = status || false;
     }
-    Task.prototype.taskChecked = function () {
-        this.checked = true;
+    Task.prototype.taskDone = function () {
+        this.status = true;
     };
     return Task;
 }());
